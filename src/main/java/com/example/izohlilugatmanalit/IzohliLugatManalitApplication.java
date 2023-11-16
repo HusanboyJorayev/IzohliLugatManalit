@@ -13,6 +13,7 @@ public class IzohliLugatManalitApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(IzohliLugatManalitApplication.class, args);
+
     }
 
 }

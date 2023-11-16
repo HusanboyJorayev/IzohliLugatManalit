@@ -78,4 +78,20 @@ public class SwaggerConfiguration {
                 .group("WordType")
                 .build();
     }
+
+    @Bean
+    public GroupedOpenApi usersApi() {
+        return GroupedOpenApi.builder()
+                .pathsToMatch("/users/**")
+                .group("User")
+                .build();
+    }
+
+    @Bean
+    public GroupedOpenApi authApi() {
+        return GroupedOpenApi.builder()
+                .pathsToMatch("/auth/**")
+                .group("Authentication")
+                .build();
+    }
 }
