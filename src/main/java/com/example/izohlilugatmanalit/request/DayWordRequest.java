@@ -10,6 +10,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DayWordRequest {
-    private LocalDate date;
+    //private LocalDate date;
     private Integer wordId;
 }

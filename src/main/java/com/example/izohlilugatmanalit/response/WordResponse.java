@@ -3,6 +3,7 @@ package com.example.izohlilugatmanalit.response;
 
 import com.example.izohlilugatmanalit.entity.DayWord;
 import com.example.izohlilugatmanalit.entity.WordInSentence;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class WordResponse {
     private Integer id;
     @NotBlank

@@ -11,4 +11,5 @@ public class WordTypeRequest {
 
     private Integer wordId;
     private Integer wordIds;
+    private Integer typeId;
 }

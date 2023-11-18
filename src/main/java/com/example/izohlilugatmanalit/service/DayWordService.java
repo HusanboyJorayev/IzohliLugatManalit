@@ -17,6 +17,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -37,6 +38,7 @@ public class DayWordService {
         try {
             DayWord type = this.dayWordMapper.toEntity(request);
             type.setCreatedAt(LocalDateTime.now());
+            type.setDate(new Date());
             this.dayWordRepository.save(type);
 
             return ResponseDto.<DayWordResponse>builder()
@@ -85,6 +87,7 @@ public class DayWordService {
             return this.dayWordRepository.findByIdAndDeletedAtIsNull(id)
                     .map(type -> {
                         type.setUpdatedAt(LocalDateTime.now());
+                        type.setDate(new Date());
                         this.dayWordRepository.save(type);
                         this.dayWordMapper.update(type, request);
 

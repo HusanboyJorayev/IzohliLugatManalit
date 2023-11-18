@@ -94,4 +94,12 @@ public class SwaggerConfiguration {
                 .group("Authentication")
                 .build();
     }
+
+    @Bean
+    public GroupedOpenApi demoApi() {
+        return GroupedOpenApi.builder()
+                .pathsToMatch("/demo/**")
+                .group("Demo")
+                .build();
+    }
 }
