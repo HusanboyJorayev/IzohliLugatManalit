@@ -17,7 +17,7 @@ import java.util.Objects;
 
 @Service
 @RequiredArgsConstructor
-public class JwtService {
+public class  JwtService {
 
     private static final String SECRET_KEY = "1234567899876543212345678987654321234567898765";
 
