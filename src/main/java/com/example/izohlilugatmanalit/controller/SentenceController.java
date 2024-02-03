@@ -4,6 +4,7 @@ import com.example.izohlilugatmanalit.dto.ResponseDto;
 import com.example.izohlilugatmanalit.request.SentenceRequest;
 import com.example.izohlilugatmanalit.response.SentenceResponce;
 import com.example.izohlilugatmanalit.service.SentenceService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,7 @@ public class SentenceController {
     }
 
     @GetMapping("/get")
+    @Operation(operationId = "id")
     public ResponseDto<SentenceResponce> get(@RequestParam Integer id) {
         return this.sentenceService.get(id);
     }
